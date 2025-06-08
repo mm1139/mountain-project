@@ -1,24 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mountain Project
 
-## Getting Started
+登山・観光地管理アプリケーション
 
-First, run the development server:
+## 機能
+
+- 場所の登録・編集・削除
+- 画像アップロード
+- ベクトル検索機能
+- カテゴリー別フィルタリング
+- Google Maps連携
+
+## 技術スタック
+
+- **フロントエンド**: Next.js 15, React 19, TypeScript, Tailwind CSS
+- **バックエンド**: Supabase
+- **AI/ML**: Xenova Transformers (テキスト埋め込み)
+- **地図**: Google Maps API
+- **その他**: Prisma, MCP (Model Context Protocol)
+
+## セットアップ
+
+### 1. 依存関係のインストール
+
+```bash
+npm install
+```
+
+### 2. 環境変数の設定
+
+`.env.example`を`.env.local`にコピーして設定:
+
+```bash
+cp .env.example .env.local
+```
+
+以下の変数を設定してください:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+DATABASE_URL=your_database_url
+```
+
+### 3. 開発サーバーの起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いてください。
 
 ## Learn More
 
